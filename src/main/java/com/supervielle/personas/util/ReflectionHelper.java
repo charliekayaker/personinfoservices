@@ -4,8 +4,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import jdk.internal.org.jline.utils.Log;
-
 public class ReflectionHelper {
 
 	public static String getObjectAsPlainText(Object obj) {
