@@ -113,7 +113,7 @@ public class PersonaController {
 		
 		long mediationTime = System.currentTimeMillis(); 
 		
-		LogServ.getInstance().LogPRequest(request, logger);
+		//LogServ.getInstance().LogPRequest(request, logger);
 		
 		Persona persona = PersonaConverter.getPersona(personaDTO);		
 		Integer personaId = personaService.recordPerson(persona);

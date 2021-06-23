@@ -4,6 +4,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import jdk.internal.org.jline.utils.Log;
+
 public class ReflectionHelper {
 
 	public static String getObjectAsPlainText(Object obj) {
@@ -53,8 +55,8 @@ public class ReflectionHelper {
 			}
 		} catch (NoSuchMethodException | IllegalAccessException | IllegalArgumentException
 				| InvocationTargetException | ClassNotFoundException ex) {		
+			if(!(ex instanceof NoSuchMethodException))
 				ex.printStackTrace();
-		
 		} 
 		
 		return sb.toString();

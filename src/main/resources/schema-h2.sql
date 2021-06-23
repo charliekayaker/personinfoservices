@@ -1,6 +1,6 @@
 
 CREATE TABLE PERSONA(
-    ID int,
+    ID int AUTO_INCREMENT,
     APELLIDO varchar(50),
     EDAD int,
     MAIL varchar(150),

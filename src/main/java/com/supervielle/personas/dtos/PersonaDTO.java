@@ -9,10 +9,11 @@ import com.supervielle.personas.enums.Sex;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiModelProperty.AccessMode;
 
 public class PersonaDTO {
 
-	@ApiModelProperty(value = "Identificador único de la persona", readOnly = true, example = "1")
+	@ApiModelProperty(value = "Identificador único de la persona", accessMode = AccessMode.READ_ONLY, example = "")
 	@JsonProperty(value = "id")
 	private Integer  id;
 	
@@ -42,7 +43,7 @@ public class PersonaDTO {
     private String apellido;
 	
 	@ApiModelProperty(value = "Indica el sexo de la persona.", required = true, example = "MASCULINO", allowableValues="MASCULINO, FEMENINO")
-	@JsonProperty(value = "sexo")
+	@JsonProperty(value = "sex")
 	@NotNull
 	private Sex sex;
 	
